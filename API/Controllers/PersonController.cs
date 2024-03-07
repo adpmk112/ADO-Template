@@ -16,21 +16,21 @@ namespace API.Controllers
             _personRepo = personRepo;
         }
 
-        [HttpGet]
-        public dynamic Test()
-        {
-            Person person = new Person();
-            person.Name = "Hpring";
-            person.Age = 25;
-
-            return _personRepo.Create(person);
-        }
-
         //[HttpGet]
         //public dynamic Test()
         //{
-        //    return _personRepo.GetAll();
+        //    Person person = new Person();
+        //    person.Name = "Hpring";
+        //    person.Age = 25;
+
+        //    return _personRepo.Create(person);
         //}
+
+        [HttpGet]
+        public dynamic Test()
+        {
+            return _personRepo.GetAll();
+        }
 
     }
 }

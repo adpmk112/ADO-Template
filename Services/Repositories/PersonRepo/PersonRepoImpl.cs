@@ -19,7 +19,7 @@ namespace Services.Repositories.PersonRepo
 
         public int Create(Person entity)
         {
-            var sql = "INSERT INTO people (Name,Age) Values (@Name,@Age)";
+            var sql = "INSERT INTO person (Name,Age) Values (@Name,@Age)";
 
             Dictionary<string,object> paramPairs = new Dictionary<string,object>();
             paramPairs.Add("@Name", entity.Name);
@@ -35,7 +35,7 @@ namespace Services.Repositories.PersonRepo
 
         public List<Person> GetAll()
         {
-            var sql = "SELECT * FROM people";
+            var sql = "SELECT * FROM person";
             return _iDao.GetList<Person>(sql);
         }
 
